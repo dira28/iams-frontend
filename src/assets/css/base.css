@@ -1,0 +1,15 @@
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-slate-50 font-sans text-slate-800 antialiased;
+    min-height: 100dvh;
+  }
+  #app {
+    min-height: 100dvh;
+  }
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}

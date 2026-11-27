@@ -1,0 +1,62 @@
+@layer components {
+  /* ===== Button ===== */
+  .btn {
+    @apply inline-flex min-h-11 select-none items-center justify-center gap-2 rounded-xl px-4 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-sm { @apply min-h-9 px-3 text-xs; }
+  .btn-primary { @apply bg-brand-600 text-white shadow-sm hover:bg-brand-700 active:scale-[0.98]; }
+  .btn-secondary { @apply bg-white text-slate-700 ring-1 ring-slate-200 hover:bg-slate-50; }
+  .btn-danger { @apply bg-rose-600 text-white hover:bg-rose-700; }
+  .btn-ghost { @apply text-slate-600 hover:bg-slate-100; }
+
+  /* ===== Form ===== */
+  .field-label { @apply mb-1.5 block text-sm font-medium text-slate-700; }
+  .input {
+    @apply block min-h-11 w-full rounded-xl border border-slate-200 bg-white px-3.5 text-base text-slate-800 transition placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-500/15 sm:text-sm;
+  }
+  .input-error { @apply border-rose-400 focus:border-rose-500 focus:ring-rose-500/15; }
+
+  /* ===== Card ===== */
+  .card { @apply rounded-2xl bg-white shadow-card ring-1 ring-slate-100; }
+  .card-body { @apply p-4 sm:p-6; }
+
+  /* ===== Badge ===== */
+  .badge { @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold; }
+  .badge-success { @apply bg-emerald-50 text-emerald-700; }
+  .badge-warning { @apply bg-amber-50 text-amber-700; }
+  .badge-info { @apply bg-sky-50 text-sky-700; }
+  .badge-danger { @apply bg-rose-50 text-rose-700; }
+  .badge-neutral { @apply bg-slate-100 text-slate-600; }
+
+  /* ===== Table ===== */
+  .table { @apply w-full text-left text-sm; }
+  .table th { @apply whitespace-nowrap bg-slate-50 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500; }
+  .table td { @apply whitespace-nowrap px-4 py-3.5 text-slate-700; }
+  .table tbody tr { @apply border-t border-slate-100 hover:bg-slate-50/60; }
+
+  /* ===== Layout ===== */
+  .page { @apply p-4 sm:p-6 lg:p-8; }
+
+  .sidebar {
+    @apply fixed inset-y-0 left-0 z-40 flex h-dvh w-72 max-w-[85vw] flex-col border-r border-slate-200 bg-white transition-transform duration-200 lg:w-64 lg:translate-x-0;
+  }
+  .navbar {
+    @apply sticky top-0 z-20 flex h-16 items-center justify-between border-b border-slate-200 bg-white/80 px-4 backdrop-blur sm:px-6;
+  }
+  .nav-link {
+    @apply flex min-h-11 items-center gap-3 rounded-xl px-3 text-sm font-medium text-slate-600 transition hover:bg-slate-100;
+  }
+  .nav-link-active { @apply bg-brand-50 text-brand-700 hover:bg-brand-50; }
+
+  /* ===== Modal ===== */
+  .modal-backdrop {
+    @apply fixed inset-0 z-50 flex items-end justify-center bg-slate-900/50 sm:items-center sm:p-4;
+  }
+  .modal-panel {
+    @apply flex max-h-[90dvh] w-full flex-col rounded-t-2xl bg-white shadow-xl sm:max-w-lg sm:rounded-2xl;
+  }
+
+  /* ===== Transition ===== */
+  .fade-enter-active, .fade-leave-active { transition: opacity 0.15s ease; }
+  .fade-enter-from, .fade-leave-to { opacity: 0; }
+}
